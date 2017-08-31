@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import PubSub from 'pubsub-js';
 import Auth from '../modules/auth';
 
 import FormValidationErrors from '../components/form-validation-errors';
@@ -56,7 +55,6 @@ class SignIn extends Component {
 
         // Save the token
         Auth.authenticateUser(xhr.response.token, xhr.response.user);
-        PubSub.publish('UserUpdate', xhr.response.user);
 
         // Redirect to home page
         this.props.history.push('/');

@@ -11,9 +11,10 @@ import NavBar from './common/navbar';
 
 class App extends React.Component {
   render() {
+    const user = Auth.getUser() || { user: { name: null, role: null } };
     return (
       <div>
-        <NavBar isAuthenticated={Auth.isAuthenticated()} />
+        <NavBar isAuthenticated={Auth.isAuthenticated()} user={user} />
         <div className="container-fluid">
           <MainRoutes />
         </div>

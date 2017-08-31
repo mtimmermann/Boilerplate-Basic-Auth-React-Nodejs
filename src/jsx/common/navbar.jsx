@@ -1,29 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PubSub from 'pubsub-js';
 import Auth from '../modules/auth';
 import { NavLink } from 'react-router-dom';
 
 class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      user: this.props.isAuthenticated ? Auth.getUser() : { name: '' }
-    };
-  }
-
-  // Pubsub w/ react and pubsub-js
-  //   See: https://anthonymineo.com/communication-between-independent-components-in-react-using-pubsubjs/
-  componentWillMount() {
-    this.userToken = PubSub.subscribe('UserUpdate', this.userUpdate.bind(this));
-  }
-  componentWillUnmount() {
-    PubSub.unsubscribe(this.userToken);
-  }
-  userUpdate(msg, user) {
-    this.setState({ user: user }); // eslint-disable-line object-shorthand
-  }
 
   // eslint-disable-next-line class-methods-use-this
   signOut() {
@@ -32,6 +12,7 @@ class NavBar extends React.Component {
 
   render() {
     const isAuthenticated = this.props.isAuthenticated;
+    const user = this.props.user;
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
@@ -72,7 +53,7 @@ class NavBar extends React.Component {
               <ul className="nav navbar-nav pull-right">
                 <li className="dropdown">
                   <a className="dropdown-toggle" href="#" data-toggle="dropdown">
-                    {this.state.user.name}
+                    {user.name}
                     <b className="caret" />
                   </a>
                   <ul className="dropdown-menu">
@@ -92,7 +73,8 @@ class NavBar extends React.Component {
   }
 }
 NavBar.propTypes = {
-  isAuthenticated: PropTypes.bool.isRequired
+  isAuthenticated: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default NavBar;
