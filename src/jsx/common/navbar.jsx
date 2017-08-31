@@ -60,10 +60,10 @@ class NavBar extends React.Component {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="" data-toggle="modal" data-target="#modal-about">About: React Node.js Webpack</a>
+                    <a href="" data-toggle="modal" data-target="#modal-about">About: Passport React Node.js</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mtimmermann/Nodejs-Webpack-React-Examples" target="_blank" rel="noopener noreferrer">Source Code on GitHub</a>
+                    <a href="https://github.com/mtimmermann/Boilerplate-Basic-Auth-React-Nodejs" target="_blank" rel="noopener noreferrer">Source Code on GitHub</a>
                   </li>
                 </ul>
               </li>
