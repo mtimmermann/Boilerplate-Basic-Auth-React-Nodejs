@@ -1,0 +1,25 @@
+{
+	"version": "1.0.0",
+	"name": "Boilerplate Local Passport React Nodejs",
+	"launch_path": "/index.html",
+	"description": "Boilerplate for local passport authentication: React, ES6 and Bootstrap",
+	"icons": {
+		"128": "/img/ico/icon-128x128.png"
+	},
+	"developer": {
+		"name": "",
+		"url": ""
+	},
+	"installs_allowed_from": [
+		"*"
+	],
+	"default_locale": "en",
+	"permissions": {
+	},
+	"locales": {
+		"en": {
+			"name": "Boilerplate Local Passport React Nodejs",
+			"description": "Boilerplate for local passport authentication: React, ES6 and Bootstrap"
+		}
+	}
+}

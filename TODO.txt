@@ -1,0 +1,8 @@
+
+https://codereview.stackexchange.com/questions/162859/routes-requiring-authentication-in-react
+D:/Projects/authentication-in-react-apps
+
+https://github.com/expressjs/csurf
+
+passport
+https://github.com/jaredhanson/passport

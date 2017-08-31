@@ -1,0 +1,4 @@
+{
+  "dbUri": "mongodb://localhost/node_auth",
+  "jwtSecret": "!!secret phrase!!"
+}
