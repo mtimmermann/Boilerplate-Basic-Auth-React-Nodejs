@@ -87,8 +87,7 @@ module.exports = {
       { from: './manifest.webapp' },
       { from: './robots.txt' },
       { from: './favicon.ico' },
-      { from: './img/**/*', to: './' },
-      { from: '../node_modules/highcharts-exporting/exporting.js', to: './js/dependencies' }
+      { from: './img/**/*', to: './' }
     ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
