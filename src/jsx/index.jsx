@@ -1,4 +1,4 @@
-import '../js/imports';
+import './common/imports';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
